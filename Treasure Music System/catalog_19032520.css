@@ -1,0 +1,158 @@
+/* Color palette: https://coolors.co/bfcde0-fefcfd-ff6b6b-494947-212121*/
+
+musicStore {
+    background-color: #212121; 
+    width: 98%;
+    text-align: center;
+    padding: 15px;
+    overflow-x:hidden; 
+}
+
+storeInfo {
+    display:block;
+    text-align:center;
+}
+
+storeName {
+    font-family:cursive,arial,helvetica;
+    font-weight: 500;
+    font-size: 90px;
+    padding: 5px; 
+    color: #FF6B6B;
+    margin-bottom: 20px;
+}
+
+logo{
+    content: url(images/logo.jpeg);
+    float: left;
+    height: 150px;
+    border-radius: 5px;
+}
+
+address,contact,website {
+    display: inline;
+    font-family:  cursive, Arial, Helvetica;
+    color:#FEFCFD;
+    width: 98%; 
+    font-size: 15pt;
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+music{
+    display: block;
+}
+
+category {
+    border-top: #FF6B6B 3px solid;
+    border-radius: 2px;
+    margin-top: 60px;
+    text-align: center;
+    width: 98%;
+    display: block;
+    font-size: 50px;
+    font-family: "Comic Sans Ms";
+    padding-bottom: 20px;
+    padding-left: 25px;
+    color: #BFCDE0;
+}
+
+song{
+    margin-top: 25px;
+    display: inline-block;
+    background-color: #494947;
+    padding-top:25px;
+    padding-bottom: 25px;
+    margin-right: 10px;
+    border: #FEFCFD 2px solid;
+    border-radius: 15px;
+    width: 75%;
+}
+
+name {
+    text-align: left;
+    display: block;
+    font-size: 50px;
+    font-family: "Comic Sans Ms";
+    padding-bottom: 20px;
+    padding-left: 25px;
+    color: #BFCDE0;
+}
+
+genre, album, length, releaseDate, recordedBy, producer, title, band, bandTitle, singer, writer, label, extras {
+    display: block;
+    font-family:  cursive, Arial, Helvetica;
+    font-size:15pt;
+    padding: 10px;
+    text-align: left;
+    color: #FEFCFD;
+}
+
+singer, writer, band{
+    display: inline;
+    color: #BFCDE0;
+}
+
+title, label, bandTitle {
+    color: #FF6B6B;
+}
+
+image{
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 10px;
+    height: 600px;
+    width: 588px;
+}
+
+/* image height=600 width=588*/
+image[imgId='i01']{
+    content: url(images/monster.jpg);
+    
+}
+image[imgId='i02']{
+    content: url(images/intheend.jpg);
+    
+}
+
+image[imgId='i03']{
+    content: url(images/euphoria.jpg);
+    
+}
+
+image[imgId='i04']{
+    content: url(images/attention.png);
+    
+}
+
+image[imgId='i05']{
+    content: url(images/friends.jpg);
+    
+}
+
+image[imgId='i06']{
+    content: url(images/closer.jpg);
+    
+}
+
+image[imgId='i07']{
+    content: url(images/nextGirl.jpg);
+    
+}
+
+image[imgId='i08']{
+    content: url(images/pillowtalk.jpg);
+    
+}
+
+image[imgId='i09']{
+    content: url(images/wolves.png);
+    
+}
+
+image[imgId='i10']{
+    content: url(images/weDontTalkAnymore.jpg);
+    
+}

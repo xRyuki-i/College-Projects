@@ -1,0 +1,252 @@
+#!/bin/bash
+
+#functions
+
+#The question function holds the tasks from Qno4 to QNo11
+question() {
+echo -e "Which country has the best football team?"
+echo -e "-(BRZ) Brazil"
+echo -e "-(ARG) Argentina"
+echo -e "-(NEP) Nepal"
+echo -e "-(CHI) China"
+echo -e "-(ENG) England"
+echo
+echo -e "Enter the code of the football team"
+echo -e "-> \c"
+read country
+country=${country^^}
+
+answer="incorrect"
+
+until [ $answer == "correct" ]
+do
+if [ $country = "BRZ" ]
+then
+answer="correct"
+echo --------------------------------------------------------
+echo -e "\t\t--Correct answer--"
+echo -e "Brazil is most successful national team in the FIFA \nWorld Cup, being crowned five time. Brazil has the\nhighest average football Elo rating since 1970. Brazil\nis the only national team to have won the World Cup on\nfour different continents: Europe, North America,\nSouth America and Asia."
+echo --------------------------------------------------------
+else
+echo --------------------------------------------------------
+echo -e "\t\t--Incorrect answer--"
+echo -e "\t--Please Re-enter another code -> \c"
+read country
+country=${country^^}
+fi
+done
+
+echo -e "Some five-star players are enlisted below"
+echo -e "-(LM) Lionel Messi"
+echo -e "-(NJ) Neymar Junior"
+echo -e "-(KC) Kiran Chemjong"
+echo -e "-(ZZ) Zheng Zhi"
+echo -e "-(HK) Harry Kane"
+echo
+echo -e "List codes of three players separating them by a space"
+echo -e "-> \c"
+
+
+value="empty"
+condition="false"
+input
+
+until [ $value == "not_empty" ]
+do
+if [[ -z "$c1" ]] | [[ -z "$c2" ]] | [[ -z "$c3" ]]
+then
+echo ---------------------------------------------------------
+echo -e "\t\t--Invalid input--"
+echo -e "\t--Please enter a total of 3 codes--"
+echo -e "-> \c"
+input
+else
+value="not_empty"
+fi
+done
+
+until [ $condition == "true" ]
+do
+for code in $c1 $c2 $c3
+do
+case "$code" in
+"LM"|"NJ"|"KC"|"ZZ"|"HK")
+condition="true"
+;;
+*)
+echo ---------------------------------------------------------
+echo -e "\t\t--Invalid input--"
+echo -e "\t\t-Please Try Again-"
+echo -e "-> \c"
+condition="false"
+input
+break
+;;
+esac
+done
+done
+
+menu $c1 $c2 $c3
+
+echo --------------------------------------------------------
+
+continue
+}
+
+#the input function takes input of 3 codes from the user separated by spaces and converst the inputs to uppercase
+input() {
+read c1 c2 c3
+c1=${c1^^}
+c2=${c2^^}
+c3=${c3^^}
+
+if [ ${#c3} -gt 2 ]
+then
+	echo ---------------------------------------------------------
+	echo -e "Please Enter only 3 codes of the players"
+	echo ---------------------------------------------------------
+	echo -e "-> \c"
+	input
+fi
+
+if [[ $c1 = $c2 || $c2 = $c3 || $c3 = $c1 ]]
+then
+echo --------------------------------------------------------
+echo -e "Don't enter the a code more than once"
+echo --------------------------------------------------------
+echo -e "-> \c"
+input
+fi
+}
+
+#the menu function displays a menu with the codes of players chosen by the userr
+menu() {
+echo --------------------------------------------------------
+echo "Menu of the codes that youve chosen"
+PS3="Choose one of the three codes :"
+select code in $1 $2 $3
+do
+if [[ -z "$code" ]]
+then
+echo -e "\t\t--Invalid Input--"
+echo -e "\t\t-Please Try Again-"
+menu $1 $2 $3
+else
+file $code
+fi
+break
+done
+}
+
+#the file function displays the content of a file if the file is readable else it returns the user to task of Qno4
+file() {
+echo --------------------------------------------------------
+if [ -r $1 ]
+then
+	echo -e "$1"
+	cat $1
+else
+	echo -e "\t--The code doesn't have any readable file--"
+	echo -e "\t\t--Restarting the program--"
+	echo --------------------------------------------------------
+	question
+fi
+}
+
+#the continue function checks if the user wants to restart the program or not
+continue() {
+echo -e "Do you want to start from the beginning again? (Y/N):-\c"
+read confirmation
+confirmation=${confirmation^^}
+if [ $confirmation == "Y" ]
+then
+	echo --------------------------------------------------------
+	echo -e "\t\t--Restarting the program--"
+	echo --------------------------------------------------------
+	question
+elif [ $confirmation == "N" ]
+then
+	echo --------------------------------------------------------
+	echo -e "\t\t--Exiting Program--"
+	echo --------------------------------------------------------
+	exit
+else
+	echo --------------------------------------------------------
+	echo -e "\t\t--Enter Y or N--"
+	continue
+fi
+}
+
+#-----------------------------------------------------------------------------------------------------
+#Start of main program
+secretkey=1234
+password=0
+
+#checks password to start the program
+if [ $# = 2 ] && [[ $1 = $(echo "$1" | tr -dc '[:alpha:]') ]] && [[ $2 = $(echo "$2" | tr -dc '[:digit:]') ]]
+then
+	echo --------------------------------------------------------
+	echo -e "\t\t     --Welcome--"
+	echo --------------------------------------------------------
+elif [[ $1 != $(echo "$1" | tr -dc '[:alpha:]') ]]
+then
+	echo "Please enter a valid Username."
+	exit
+elif [[ $2 != $(echo "$2" | tr -dc '[:digit:]') ]]
+then
+	echo "Please enter a valid College_ID."
+	exit
+else
+	echo "Please enter the two parameters i.e Username and College ID respectively."
+exit
+fi
+
+echo -e  "Enter the password to initiate the project :- \c"
+for var in 1 2 3 4 5
+do
+read password
+
+if [ $password = $secretkey ]
+then
+echo --------------------------------------------------------
+echo -e "\t\t--Access Granted--"
+break
+else
+echo --------------------------------------------------------
+echo -e "\t\t--Incorrect password--"
+	if [ $var = 4 ]
+	then
+		echo -e "\tThis is your last try!!!"
+	fi
+	while [ $var != 5 ]
+	do
+	echo -e "\tPlease Re-enter the password :-\c"
+	break
+	done
+fi
+
+if [ $var = 5 ]
+then
+echo --------------------------------------------------------
+echo -e "\t\t --Access Denied--"
+echo --------------------------------------------------------
+echo -e "\t\t--Exiting Program--"
+echo --------------------------------------------------------
+exit
+fi
+
+done
+
+echo --------------------------------------------------------
+echo -e "\tWelcome to $project project"
+echo -e "\tCollege ID :- $2"
+echo -e "\tUserName :- $1"
+echo -e "\tDate       :- \c"
+date +"%d-%m-%y"
+echo -e "\tTime       :- \c"
+date "+%T"
+echo --------------------------------------------------------
+
+question
+
+#End of main program

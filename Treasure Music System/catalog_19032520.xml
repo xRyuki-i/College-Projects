@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!-- external css -->
+<?xml-stylesheet type="text/css" href="catalog_19032520.css"?>
+
+<!-- DTD-->
+<!DOCTYPE musicStore SYSTEM "catalog_19032520.dtd"[]>
+
+<!-- Schema -->
+<musicStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+			xsi:noNamespaceSchemaLocation="catalog_19032520.xsd">
+            
+    <!-- Store Information-->
+    <storeInfo>
+        <logo></logo>
+        <storeName>Treasure Music</storeName>
+        <address>Baneshwor, Kathmandu</address>
+        <contact>9803155980</contact>
+        <website>https://treasuremusicstore.com</website>
+    </storeInfo>
+
+    <!-- Music Information-->
+    <music>
+        <category>Songs</category>
+        <song songId='s01'>
+            <name>Monster</name>
+            <image imgId='i01'></image>
+            <genre>Genre: Pop</genre>
+            <album>Album: Wonder</album>
+            <length>Length: 02:58</length>
+            <releaseDate>Release Date: 20th Nov 2020</releaseDate>
+            <singers singerCount='2'>
+                <title>Singers</title>
+                <singer>Shawn Mendes,</singer>
+                <singer>Justin Bieber</singer>
+            </singers>
+            <recordedBy>Recorded By: Island Records</recordedBy>
+            <songWriters writerCount='3'>
+                <label>Writers</label>
+                <writer>Adam King Feeney,</writer>
+                <writer>Ashton Simmonds,</writer>
+                <writer>Mustafa Ahmed</writer>
+            </songWriters>
+            <producer>Producer: Frank Dukes</producer>
+        </song>
+
+        <song songId='s02'>
+            <name>In the End</name>
+            <image imgId='i02'></image>
+            <genre>Genre: Metal</genre>
+            <album>Album: Hybrid Theory</album>
+            <length>Length: 03:38</length>
+            <releaseDate>Release Date: 23rd Aug 2001</releaseDate>
+            <bands>
+            	<bandTitle>Band</bandTitle>
+                <band>Linkin Park</band>
+            </bands>
+            <recordedBy>Recorded By: Warner Bros</recordedBy>
+            <producer>Producer: Don Gilmore</producer>
+            <extras>Extra : The singers of the band wrote the song themselves.</extras>
+	    </song>
+
+        <song songId='s03'>
+            <name>Euphoria</name>
+            <image imgId='i03'></image>
+            <genre>Genre: Pop</genre>
+            <album>Album: Love Yourself</album>
+            <length>Length: 03:49</length>
+            <releaseDate>Release Date: 29th Dec 2018</releaseDate>
+            <singers>
+            	<title>Singer</title>
+                <singer>Jeon Jung kook</singer>
+            </singers>
+            <recordedBy>Recorded By: Big Hit Studio</recordedBy>
+            <songWriters writerCount='3'>
+            	<label>Writers</label>
+                <writer>Candace Nicole Sosa,</writer>
+                <writer>Adora,</writer>
+                <writer>Kim Nam joon</writer>
+            </songWriters>
+            <producer>Producer: Jordan Young</producer>
+        </song>
+
+        <song songId='s04'>
+            <name>Attention</name>
+            <image imgId='i04'></image>
+            <genre>Genre: Rock</genre>
+            <album>Album: Voicenotes</album>
+            <length>Length: 03:31</length>
+            <releaseDate>Release Date: 21th Apr 2017</releaseDate>
+            <singers>
+            	<title>Singer</title>
+                <singer>Charlie Puth</singer>
+            </singers>
+            <songWriters>
+            	<label>Writer</label>
+                <writer>Jacob Kasher</writer>
+            </songWriters>
+            <extras>Extra: Charlie Puth produced and recorded the song by himself. Also he wrote the song along with the song writer.</extras>
+        </song>
+
+        <song songId='s05'>
+            <name>Friends</name>
+            <image imgId='i05'></image>
+            <genre>Genre: Electronic Dance Music</genre>
+            <album>Album: Speak Your Mind</album>
+            <length>Length: 03:22</length>
+            <releaseDate>Release Date: 9th Feb 2018</releaseDate>
+            <singers>
+            	<title>Singer</title>
+                <singer>Anne Marie</singer>
+            </singers>
+            <recordedBy>Recorded By: Atlantic Records</recordedBy>
+            <songWriters writerCount='3'>
+            	<label>Writer</label>
+                <writer>Eden Anderson,</writer>
+                <writer>Natalie Dunn,</writer>
+                <writer>Sarah Blanchard</writer>
+            </songWriters>
+            <producer>Producer: Marshmello</producer>
+        </song>
+
+        <song songId='s06'>
+            <name>Closer</name>
+            <image imgId='i06'></image>
+            <genre>Genre: Pop</genre>
+            <album>Album: Collage</album>
+            <length>Length: 04:04</length>
+            <releaseDate>Release Date: 29th Jul 2016</releaseDate>
+            <singers singerCount='2'>
+            	<title>Singers</title>
+                <singer>Halsey,</singer>
+                <singer>Adrew Taggart</singer>
+            </singers>
+            <recordedBy>Recorded By: Disruptor Studio</recordedBy>
+            <songWriters writerCount='3'>
+            	<label>Writers</label>
+                <writer>Ashley,</writer>
+                <writer>Shaun Frank,</writer>
+                <writer>Joe King</writer>
+            </songWriters>
+            <producer>Producer: The Chainsmokers</producer>
+	    </song>
+
+        <song songId='s07'>
+            <name>Next Girl</name>
+            <image imgId='i07'></image>
+            <genre>Genre: Country</genre>
+            <album>Album: EP29</album>
+            <length>Length: 02:44</length>
+            <releaseDate>Release Date: 4th Sept 2020</releaseDate>
+            <singers>
+            	<title>Singer</title>
+                <singer>Carly Pearce</singer>
+            </singers>
+            <recordedBy>Recorded By: American Country Music</recordedBy>
+            <songWriters writerCount='2'>
+            	<label>Writers</label>
+                <writer>Shane McAnally,</writer>
+                <writer>Josh Osborne</writer>
+            </songWriters>
+            <extras>Extra: The writers of the song were the producers of the song.</extras>
+	    </song>
+
+        <song songId='s08'>
+            <name>Pillowtalk</name>
+            <image imgId='i08'></image>
+            <genre>Genre: R&amp;B</genre>
+            <album>Album: Mind of Mine</album>
+            <length>Length: 03:23</length>
+            <releaseDate>Release Date: 29th Jan 2016</releaseDate>
+            <singers>
+            	<title>Singer</title>
+                <singer>Zayn Malik</singer>
+            </singers>
+            <recordedBy>Recorded By: RCA Records</recordedBy>
+            <songWriters writerCount='3'>
+            	<label>Writers</label>
+                <writer>Michael Hannides,</writer>
+                <writer>Anthony Hannides,</writer>
+                <writer>Joe Garrett</writer>
+            </songWriters>
+            <producer>Producer: Levi Lennox</producer>
+	    </song>
+
+        <song songId='s09'>
+            <name>Wolvess</name>
+            <image imgId='i09'></image>
+            <genre>Genre: Electronic Dance Music</genre>
+            <album>Album: Rare</album>
+            <length>Length: 03:17</length>
+            <releaseDate>Release Date: 25th Oct 2017</releaseDate>
+            <singers>
+            	<title>Singer</title>
+                <singer>Selena Gomez</singer>
+            </singers>
+            <recordedBy>Recorded By: Interscope Studio</recordedBy>
+            <songWriters writerCount='3'>
+            	<label>Writer</label>
+                <writer>Brian Lee,</writer>
+                <writer>Louis Bell,</writer>
+                <writer>Ali Tamposi</writer>
+            </songWriters>
+            <producer>Producer: Marshmello</producer>
+            <extras>Extra: Andrew Watt is a co-writer and co-producer on this song.</extras>
+        </song>
+
+        <song songId='s10'>
+            <name>We Don't Talk Anymore</name>
+            <image imgId='i10'></image>
+            <genre>Genre: Pop</genre>
+            <album>Album: Nine Track Mind</album>
+            <length>Length: 03:37</length>
+            <releaseDate>Release Date: 24th May 2016</releaseDate>
+            <singers singerCount='2'>
+            	<title>Singers</title>
+                <singer>Charlie Puth</singer>
+                <singer>Selena Gomez</singer>
+            </singers>
+            <recordedBy>Recorded By: Atlantic Records</recordedBy>
+            <songWriters>
+            	<label>Writer</label>
+                <writer>Jacob Kasher</writer>
+            </songWriters>
+            <extras>Extra: Charlie Puth produced by himself. Also he and Selena Gomez both wrote the song along with the song writer.</extras>
+        </song>
+    
+    </music>
+
+</musicStore>

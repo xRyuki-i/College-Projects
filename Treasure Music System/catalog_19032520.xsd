@@ -1,0 +1,160 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="musicStore">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="storeInfo"/>
+                <xs:element ref="music"/> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="storeInfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="logo"/>
+                <xs:element ref="storeName"/>
+                <xs:element ref="address"/>
+                <xs:element ref="contact"/>
+                <xs:element ref="website"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="logo"/>
+
+    <xs:element name="storeName" type="xs:string"/>
+
+    <xs:element name="address" type="xs:string"/>
+
+    <xs:element name="contact" type="xs:string"/>
+
+    <xs:element name="website" type="xs:string"/>
+
+    <xs:element name="music">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="category"/>
+                <xs:element ref="song" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="category" type="xs:string"/>
+
+    <xs:element name="song">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name"/>
+                <xs:element ref="image"/>
+                <xs:element ref="genre"/>
+                <xs:element ref="album"/>
+                <xs:element ref="length"/>
+                <xs:element ref="releaseDate"/>
+                <xs:element ref="bands" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="singers" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="recordedBy" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="songWriters"  minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="producer" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="extras" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute ref="songId" use="required"/>
+            <xs:attribute ref="type" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="name" type="xs:string"/>
+
+    <xs:element name="image">
+        <xs:complexType>
+            <xs:attribute ref="imgId" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="genre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Genre: Pop"/>
+                <xs:enumeration value="Genre: Metal"/>
+                <xs:enumeration value="Genre: Rock"/>
+                <xs:enumeration value="Genre: Electronic Dance Music"/>
+                <xs:enumeration value="Genre: Country"/>
+                <xs:enumeration value="Genre: R&amp;B"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="album" type="xs:string"/>
+
+    <xs:element name="length">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="Length: [0-9]{2}:[0-9]{2}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="releaseDate" type="xs:string"/>
+
+    <xs:element name="bands">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="bandTitle"/>
+                <xs:element ref="band" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="bandTitle" type="xs:string"/>
+    
+    <xs:element name="band" type="xs:string"/>
+
+    <xs:element name="singers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title"/>
+                <xs:element ref="singer" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute ref="singerCount" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="title" type="xs:string"/>
+
+    <xs:element name="singer" type="xs:string"/>
+
+    <xs:element name="recordedBy" type="xs:string"/>
+
+    <xs:element name="songWriters">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="label"/>
+                <xs:element ref="writer" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute ref="writerCount" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="label" type="xs:string"/>
+
+    <xs:element name="writer" type="xs:string"/>
+
+    <xs:element name="producer" type="xs:string"/>
+
+    <xs:element name="extras" type="xs:string"/>
+
+    <xs:attribute name="songId" type="xs:ID"/>
+
+    <xs:attribute name="type">
+        <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="single"/>
+            <xs:enumeration value="collab"/>
+        </xs:restriction>
+    </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="imgId" type="xs:ID"/>
+    <xs:attribute name="singerCount" type="xs:integer"/>
+    <xs:attribute name="writerCount" type="xs:integer"/>
+
+</xs:schema>

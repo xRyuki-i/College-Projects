@@ -1,0 +1,35 @@
+<!ELEMENT musicStore (storeInfo, music)>
+<!ELEMENT storeInfo (logo, storeName, address, contact, website)>
+<!ELEMENT logo (#PCDATA)>
+<!ELEMENT storeName (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>
+<!ELEMENT website (#PCDATA)>
+<!ELEMENT music (category, song+)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT song (name, image, genre, album, length, releaseDate, bands?, singers?, recordedBy?, songWriters?, producer?, extras?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
+<!ELEMENT releaseDate (#PCDATA)>
+<!ELEMENT bands (bandTitle, band+)>
+<!ELEMENT bandTitle (#PCDATA)>
+<!ELEMENT band (#PCDATA)>
+<!ELEMENT singers (title, singer+)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT singer (#PCDATA)>
+<!ELEMENT recordedBy (#PCDATA)>
+<!ELEMENT songWriters (label, writer+)>
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT writer (#PCDATA)>
+<!ELEMENT producer (#PCDATA)>
+<!ELEMENT extras (#PCDATA)>
+
+<!ATTLIST song songId ID #REQUIRED>
+<!ATTLIST song type (single|collab) #IMPLIED>
+<!ATTLIST image imgId ID #REQUIRED>
+<!ATTLIST singers singerCount CDATA #IMPLIED>
+<!ATTLIST songWriters writerCount CDATA #IMPLIED>
+
